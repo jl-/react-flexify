@@ -53,3 +53,13 @@ import Flex from 'react-flexify';
 
 - ... set other props to override its default value.
 - can also pass other props(`data-`), will be set on wrapper element
+
+---
+### note: you need to setup babel loader to the package path, suce as
+```js
+loaders: [{
+  test: /\.jsx?$/,
+  loaders: ['react-hot', 'babel'],
+  include: [path.resolve(__dirname, 'node_modules', 'react-flexify')]
+}]
+```
