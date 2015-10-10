@@ -55,7 +55,7 @@ import Flex from 'react-flexify';
 - can also pass other props(`data-`), will be set on wrapper element
 
 ---
-### note: you need to setup babel loader to the package path, suce as
+### note: you need to setup babel loader to the package path, such as
 ```js
 loaders: [{
   test: /\.jsx?$/,
