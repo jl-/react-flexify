@@ -26,7 +26,7 @@
  */
 import React, { Component } from 'react';
 import cns from 'classnames';
-import styles from './_style.scss';
+import styles from './style.css';
 
 const FLEX_PROPS_MAP = {
   justifyContent: 'justify-content',

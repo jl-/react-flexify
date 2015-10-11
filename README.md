@@ -15,15 +15,12 @@ import Flex from 'react-flexify';
 
     <div> hi </div> // normal html element
 
-    <Flex column alignItems='stretch' tag='section' className='bla' dataCustom='hi' tag='section'>
+    <Flex column alignItems='stretch' tag='section' className='bla' data-custom='hi'>
         <aside>...</aside>
         ....
-    </Flex> // flex-container, section.bla.fcol.f-ai-s > aside
+    </Flex> // flex-container, section.bla.fcol.f-ai-s(data-custom='hi') > aside
 
-</Flex> 
-
-<Flex row alignItems='stretch'> hi </Flex>
-
+</Flex>
 ```
 
 #### Usage:
@@ -42,6 +39,7 @@ import Flex from 'react-flexify';
         shrink='1',
         basis='1',
         flex='1 2 400px'
+        data-custom-data // custom attrs
         >
   </Flex>
 ```
@@ -54,12 +52,3 @@ import Flex from 'react-flexify';
 - ... set other props to override its default value.
 - can also pass other props(`data-`), will be set on wrapper element
 
----
-### note: you need to setup babel loader to the package path, such as
-```js
-loaders: [{
-  test: /\.jsx?$/,
-  loaders: ['react-hot', 'babel'],
-  include: [path.resolve(__dirname, 'node_modules', 'react-flexify')]
-}]
-```
